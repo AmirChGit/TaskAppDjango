@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ tache.titre }}</title>
+</head>
+<body>
+    <h1>{{ tache.titre }}</h1>
+    <p>{{ tache.description }}</p>
+    <p>Status: {{ tache.statut|yesno:"Completed,Pending" }}</p>
+    <a href="{% url 'tache_edit' tache.pk %}">Edit</a>
+    <a href="{% url 'tache_delete' tache.pk %}">Delete</a>
+    <a href="{% url 'tache_list' %}">Back to List</a>
+</body>
+</html>
